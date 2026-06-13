@@ -1,0 +1,246 @@
+:root {
+  --bg: #0b0d13;
+  --surface: #121625cc;
+  --text: #f3f3f7;
+  --muted: #c8c8d4;
+  --accent-start: #e96443;
+  --accent-end: #904e95;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, rgba(233, 100, 67, 0.12), transparent 45%), var(--bg);
+  line-height: 1.6;
+}
+
+body.light {
+  --bg: #f8f9ff;
+  --surface: #ffffffde;
+  --text: #1e1f2a;
+  --muted: #4b4d5f;
+  --shadow: 0 20px 40px rgba(39, 43, 58, 0.14);
+}
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 13, 19, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+body.light .topbar {
+  background: rgba(248, 249, 255, 0.8);
+  border-bottom-color: rgba(12, 12, 21, 0.1);
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand,
+.topbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.theme-toggle {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  background: linear-gradient(120deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  min-height: 78vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+h1 span {
+  background: linear-gradient(120deg, var(--accent-start), var(--accent-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--accent-start), var(--accent-end));
+  box-shadow: var(--shadow);
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+  padding: 1.2rem;
+}
+
+body.light .section {
+  border-color: rgba(30, 31, 42, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.badge-grid span {
+  background: linear-gradient(120deg, rgba(233, 100, 67, 0.25), rgba(144, 78, 149, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(7, 9, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.light .card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(30, 31, 42, 0.1);
+}
+
+.card a,
+.all-projects a,
+.contact-list a {
+  color: #ffb199;
+}
+
+body.light .card a,
+body.light .all-projects a,
+body.light .contact-list a {
+  color: #8a3f90;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.contact-list {
+  padding-left: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--muted);
+}
+
+.reveal {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity 600ms ease, transform 700ms ease;
+}
+
+.reveal.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topbar nav {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  .reveal,
+  .reveal.visible {
+    transition: none !important;
+    animation: none !important;
+  }
+}
