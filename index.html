@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Varun (teralad) - Self-taught software engineer portfolio with 3D experience."
+    />
+    <title>Varun | 3D Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <a class="brand" href="#home">Varun</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+        🌙
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero reveal">
+        <p class="eyebrow">Hello, I am</p>
+        <h1>Varun Kumaar <span>(teralad)</span></h1>
+        <p class="title">Self-Taught Software Engineer</p>
+        <p class="subtitle">Building practical developer tools with code, creativity, and a relentless thirst for knowledge.</p>
+        <a class="cta" href="#projects">View Featured Projects</a>
+      </section>
+
+      <section id="about" class="section reveal">
+        <h2>About</h2>
+        <p>
+          I am a self-taught passionate software engineer from India with an unending thirst for knowledge. I enjoy
+          solving real-world problems and building tools that make development faster and more delightful.
+        </p>
+        <div class="badge-grid" aria-label="Tech stack badges">
+          <span>Python</span><span>Ruby</span><span>Go</span><span>React</span><span>TypeScript</span><span>Docker</span>
+          <span>GraphQL</span><span>Node.js</span><span>Linux</span><span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span>
+          <span>Redis</span><span>ElasticSearch</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <h2>Featured Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Gifle</h3>
+            <p>Video to GIF converter built as a Ruby gem.</p>
+            <a href="https://github.com/teralad/gifle" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+          <article class="card">
+            <h3>Stack Wizard</h3>
+            <p>Backend stack recommendation tool built with Python.</p>
+            <a href="https://github.com/teralad/stack-wizard" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+          <article class="card">
+            <h3>Hashira</h3>
+            <p>AI-powered Java code generator built as an MCP Server.</p>
+            <a href="https://github.com/teralad/hashira" target="_blank" rel="noreferrer">View on GitHub</a>
+          </article>
+        </div>
+        <p class="all-projects">
+          Explore all repositories: <a href="https://github.com/teralad" target="_blank" rel="noreferrer">github.com/teralad</a>
+        </p>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <h2>Skills &amp; Experience</h2>
+        <div class="skills-grid">
+          <div>
+            <h3>Languages</h3>
+            <p>Python, Ruby, Go, JavaScript, TypeScript</p>
+          </div>
+          <div>
+            <h3>Frontend</h3>
+            <p>React</p>
+          </div>
+          <div>
+            <h3>Backend</h3>
+            <p>Node.js, NestJS, GraphQL</p>
+          </div>
+          <div>
+            <h3>DevOps</h3>
+            <p>Docker, GitHub Actions, Google Cloud Platform</p>
+          </div>
+          <div>
+            <h3>Databases</h3>
+            <p>MySQL, MongoDB, PostgreSQL, Redis, ElasticSearch</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:teralad@gmail.com">teralad@gmail.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/teralad" target="_blank" rel="noreferrer">github.com/teralad</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/teralad" target="_blank" rel="noreferrer">linkedin.com/in/teralad</a></li>
+          <li><strong>X:</strong> <a href="https://x.com/teralad" target="_blank" rel="noreferrer">@teralad</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Varun (teralad). Built with HTML, CSS, JavaScript, and Three.js.</p>
+    </footer>
+
+    <script src="https://unpkg.com/three@0.164.1/build/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
